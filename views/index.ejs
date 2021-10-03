@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Share</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+  <body>
+    <header>
+      <%- include('logo'); %>
+      <a href="#">
+        <img src="/images/GitHub-Mark-120px-plus.png" alt="View on Github" />
+      </a>
+    </header>
+    <section class="main">
+      <div class="middle">
+        <div class="in" id="fr">
+          <input type="file" name="fi" id="filebox" />
+          <lottie-player
+            src="https://assets6.lottiefiles.com/temp/lf20_edwUDF.json"
+            background="transparent"
+            speed="1"
+            id="upload"
+            class="upload"
+            loop
+            autoplay
+          ></lottie-player>
+          <lottie-player
+            src="https://assets6.lottiefiles.com/packages/lf20_QJbPLt.json"
+            background="transparent"
+            speed="1"
+            id="drop"
+            class="drop"
+            loop
+            autoplay
+          ></lottie-player>
+          <lottie-player
+            src="https://assets7.lottiefiles.com/packages/lf20_Dcbowq.json"
+            background="transparent"
+            speed="1"
+            id="success"
+            class="success"
+            loop
+            autoplay
+          ></lottie-player>
+          <img
+            src="/images/folder.png"
+            alt="image"
+            id="nimage"
+            class="nimage"
+          />
+          <div id="uploadField" class="gh">
+            <h4 id="text">Drop or <span id="browse">Browse</span> File</h4>
+            <h4 id="text2" style="display: none">
+              <span id="browse2">Browse</span>
+            </h4>
+          </div>
+        </div>
+        <div class="in" id="sr">
+          <div class="div">
+            <input type="text" value="Link" id="link">
+            <button id="copy">
+              Copy
+            </button>
+          </div>
+          <p>Link will be expired in <span>48 hours</span></p>
+        </div>
+      </div>
+    </section>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

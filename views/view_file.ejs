@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Share</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </head>
+  <body>
+    <header>
+      <%- include('logo'); %>
+      <a href="#">
+        <img src="/images/GitHub-Mark-120px-plus.png" alt="View on Github" />
+      </a>
+    </header>
+    <section class="main">
+      <div class="middle">
+        <div class="in" id="dr">
+          <% if(!locals.STATUS_CODE){ %>
+          <table>
+            <tbody>
+              <tr>
+                <td
+                  align="center"
+                  style="color: #08538a; font-weight: bold"
+                  class="sp"
+                >
+                  <%= locals.FILE_NAME %>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" class="sp" style="color: #1ba0fc">
+                  <%=FILE_SIZE%>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <a class="dd" href="/download/file/<%=ID%>">Download</a>
+          <% }else{ %>
+
+          <table>
+            <tbody>
+              <tr>
+                <td
+                  align="center"
+                  style="color: #08538a; font-weight: bold"
+                  class="sp"
+                >
+                  Link Has Been Expired.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <% } %>
+        </div>
+      </div>
+    </section>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
