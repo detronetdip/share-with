@@ -75,7 +75,7 @@ function upload() {
     }
   };
   xhr.upload.onprogress = showProgress;
-  xhr.open("POST", "http://localhost:3000/api/upload/files");
+  xhr.open("POST", "https://my-share-fie.herokuapp.com/api/upload/files");
   xhr.send(form);
 }
 const showProgress = (e) => {
