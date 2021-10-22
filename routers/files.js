@@ -6,6 +6,7 @@ function files(app) {
       res.status(400).send("No file provided to upload");
     } else {
       var file = req.files.myfile;
+      console.log(file);
       var newName = Date.now() + file.name;
       file.mv("./uploads/" + newName, (err) => {
         if (err) {
